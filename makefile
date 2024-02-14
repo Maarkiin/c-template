@@ -8,13 +8,13 @@ CFLAGS_RELEASE := -Wall -Wextra -Wl,-subsystem,windows -O3
 CFLAGS_DEBUG := -Wall -Wextra -g
 
 # Library paths
-LIBRARY_PATHS := -LC:/libs/glfw-3.3.8.bin.WIN32/lib-mingw
+LIBRARY_PATHS :=
 
 # Linker flags
-LDFLAGS := -lmingw32 -lglfw3dll -lopengl32
+LDFLAGS :=
 
 # Include directories
-INCLUDES := -I./include -IC:/libs/glfw-3.3.8.bin.WIN32/include
+INCLUDES := -I./include
 
 # Source files directory
 SRC_DIR := src
