@@ -1,4 +1,4 @@
-mingw32-make.exe all
-mingw32-make.exe release
-mingw32-make.exe debug
-mingw32-make.exe clean
+# C template
+includes file structuring src/ include/ obj/ res/
+cross platform makefile (make/mingw32-make.exe):
+    generates main(.exe), compile_commands ( if used with bear for linux )

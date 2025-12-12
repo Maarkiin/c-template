@@ -3,9 +3,10 @@
 
 #define UNUSED __attribute__((unused))
 
-#define u8 uint8_t
-#define u16 uint16_t
-#define u32 uint32_t
-#define u64 uint64_t
+#include <stdint.h>
+#define uint8 uint8_t
+#define uint16 uint16_t
+#define uint32 uint32_t
+#define uint64 uint64_t
 
 #endif

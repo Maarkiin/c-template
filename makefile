@@ -1,8 +1,10 @@
+## TODO gen file bear -- make
+
 # Compiler
 CC := gcc
 
 # Compiler flags for release mode
-CFLAGS_RELEASE := -Wall -Wextra -Wl,-subsystem,windows -O3
+CFLAGS_RELEASE := -Wall -Wextra -O3
 
 # Compiler flags for debug mode
 CFLAGS_DEBUG := -Wall -Wextra -g
@@ -52,6 +54,16 @@ $(TARGET): $(OBJS)
 
 # Clean build artifacts
 clean:
-	del /Q $(OBJ_DIR)\*.o $(TARGET) 2>NUL
+ifeq ($(OS),Windows_NT)
+	@del /Q $(TARGET).exe 2>NUL || exit 0
+	@del /Q $(TARGET) 2>NUL || exit 0
+	@del /Q $(OBJ_DIR)\* 2>NUL || exit 0
+else
+	rm -f $(OBJ_DIR)/*.o $(TARGET) $(TARGET).exe
+endif
 
-.PHONY: all release debug clean
+bear: clean
+	@bear -- make -n > /dev/null || true
+	@bear -- make
+
+.PHONY: all release debug clean bear

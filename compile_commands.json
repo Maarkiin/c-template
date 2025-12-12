@@ -1,0 +1,18 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-Wall",
+      "-Wextra",
+      "-O3",
+      "-I./include",
+      "-c",
+      "-o",
+      "obj/main.o",
+      "src/main.c"
+    ],
+    "directory": "/mnt/c/Users/zach/Desktop/CODE/c/adventofcode/2025/2",
+    "file": "/mnt/c/Users/zach/Desktop/CODE/c/adventofcode/2025/2/src/main.c",
+    "output": "/mnt/c/Users/zach/Desktop/CODE/c/adventofcode/2025/2/obj/main.o"
+  }
+]
